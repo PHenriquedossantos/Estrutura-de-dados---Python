@@ -14,3 +14,7 @@ class ListaLigada:
         while no_atual:
             print(no_atual.valor)
             no_atual = no_atual.proximo
+    
+    def tamanho(self):
+        no_atual = self.inicio
+        print(no_atual)

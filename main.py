@@ -27,9 +27,11 @@ if menu == 1:
     print(vetor_teste.tamanho_vetor())
     print(vetor_teste.contem(3))
     print(vetor_teste)
+    
 elif menu == 2:
     minha_lista = ListaLigada()
     minha_lista.adicionar(1)
     minha_lista.adicionar(2)
     minha_lista.adicionar(3)
     minha_lista.imprimir()
+    minha_lista.tamanho()
