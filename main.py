@@ -33,5 +33,13 @@ elif menu == 2:
     minha_lista.adicionar(1)
     minha_lista.adicionar(2)
     minha_lista.adicionar(3)
+
     minha_lista.imprimir()
-    minha_lista.tamanho()
+
+
+    x = minha_lista.tamanho()
+    print(x)
+
+    num_busca = minha_lista.buscar(1)
+    print(f'O resultado da busca é {num_busca}')
+    

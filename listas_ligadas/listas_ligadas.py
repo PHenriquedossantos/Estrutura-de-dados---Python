@@ -24,11 +24,26 @@ class ListaLigada:
             no_atual = no_atual.proximo
         return contador
 
-
     def buscar(self, valor):
+        retorno = 0
         no_atual = self.inicio
         while no_atual:
             if no_atual.valor == valor:
+                retorno = no_atual.valor
+                return retorno
+            no_atual = no_atual.proximo
+        return None
+
+    def remover(self, valor):
+        no_anterior = None
+        no_atual = self.inicio
+        while no_atual:
+            if no_atual.valor == valor:
+                if no_anterior is None:
+                    self.inicio = no_atual.proximo
+                else:
+                    no_anterior.proximo = no_atual.proximo
                 return True
+            no_anterior = no_atual
             no_atual = no_atual.proximo
         return False
