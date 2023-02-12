@@ -1,5 +1,5 @@
 from vetores import vetor
-from listas_ligadas.listas_ligadas import ListaLigada
+from listas_ligadas.linkedlist import ListaLigada
 
 print(30 * "-", "MENU", 30 * "-")
 
