@@ -1,5 +1,4 @@
-from vetores import vetor
-from listas_ligadas.linkedlist import ListaLigada
+from vetores.array import Vetor
 
 print(30 * "-", "MENU", 30 * "-")
 
@@ -9,7 +8,7 @@ print("2. Listas Ligadas")
 menu = int(input("Digite a opção desejada: "))
 
 if menu == 1:
-    vetor_teste = vetor.Vetor(0)
+    vetor_teste = Vetor(0)
     #vetor_teste.inserir_elemento_final(1)
     #vetor_teste.inserir_elemento_final(2)
     #vetor_teste.inserir_elemento_final(1)
@@ -28,18 +27,5 @@ if menu == 1:
     print(vetor_teste.contem(3))
     print(vetor_teste)
     
-elif menu == 2:
-    minha_lista = ListaLigada()
-    minha_lista.adicionar(1)
-    minha_lista.adicionar(2)
-    minha_lista.adicionar(3)
 
-    minha_lista.imprimir()
-
-
-    x = minha_lista.tamanho()
-    print(x)
-
-    num_busca = minha_lista.buscar(1)
-    print(f'O resultado da busca é {num_busca}')
     
