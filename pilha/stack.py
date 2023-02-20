@@ -2,19 +2,19 @@ from node import Node
 #  inserir na pilha
 #  remover da pilha
 #  observar o topo da pilha
+#   lifo = last in first out 
 class Stack:
     def __init__(self):
         self.top = None
         self._size = 0
 
     def push(self, elem):
-        #insere um elemento na pilha
         node = Node(elem)
         node.next = self.top
         self.top = node
+        self._size +=1
     
     def pop(self):
-        # remove o top da pilha
         if self._size > 0:
             node = self.top
             self.top = self.top.next
@@ -23,7 +23,6 @@ class Stack:
         raise IndexError('The stack is empty')
 
     def peek(self):
-        # retorna o topo sem remover
         if self._size > 0:
             return self.top.data
         raise IndexError('The stack is empty')
@@ -45,9 +44,11 @@ class Stack:
 
 
 x = Stack()
+print(len(x))
 x.push(2)
 x.push(4)
 x.push(32)
 x.push(222)
 x.push(True)
 print(x)
+print(len(x))

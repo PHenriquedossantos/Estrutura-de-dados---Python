@@ -19,6 +19,8 @@ class LinkedList:
         return self._size
 
     def _getnode(self, index):
+        #[1, 2, 3, 4, 5, 6]
+        # 0  1  2  3  4  5
         pointer = self.head
         for i in range(index):
             if pointer:
@@ -109,10 +111,11 @@ lista.append(6)
 lista.append(7)
 lista.append(8)
 print(lista[0])
-lista.remove(1)
 print(lista[0])
 print(lista)
 lista.remove(4)
 print(lista)
+print(lista.index(1))
+print(len(lista))
 #print(lista.index(1))
 
