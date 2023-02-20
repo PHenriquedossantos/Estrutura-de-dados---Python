@@ -33,9 +33,9 @@ class Stack:
 
     def __repr__(self):
         r = ""
-        pointer = self.head
+        pointer = self.top
         while(pointer):
-            r = r + str(pointer.data) + "->"
+            r = r + str(pointer.data) + "\n"
             pointer = pointer.next
         return r
 
@@ -49,3 +49,5 @@ x.push(2)
 x.push(4)
 x.push(32)
 x.push(222)
+x.push(True)
+print(x)
