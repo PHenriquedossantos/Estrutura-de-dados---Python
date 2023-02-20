@@ -14,9 +14,13 @@ class Stack:
         self.top = node
     
     def pop(self):
-        # remove o elemento no topo da pilha
-        pass
-    
+        # remove o top da pilha
+        if self._size > 0:
+            node = self.top
+            self.top = self.top.next
+            self._size -= 1
+            return node
+        raise IndexError('The stack is empty')
     def peek(self):
         # retorna o topo sem remover
         pass
@@ -36,3 +40,8 @@ class Stack:
 
 
 
+x = Stack()
+x.push(2)
+x.push(4)
+x.push(32)
+x.push(222)
