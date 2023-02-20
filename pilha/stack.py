@@ -19,11 +19,15 @@ class Stack:
             node = self.top
             self.top = self.top.next
             self._size -= 1
-            return node
+            return node.data
         raise IndexError('The stack is empty')
+
     def peek(self):
         # retorna o topo sem remover
-        pass
+        if self._size > 0:
+            return self.top.data
+        raise IndexError('The stack is empty')
+
     def __len__(self):
         return self._size
 
